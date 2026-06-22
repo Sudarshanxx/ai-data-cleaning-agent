@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-    page_title="AI Data Cleaning Agent",
+    page_title="AI Data Cleaning Agent V1",
     page_icon="🤖",
     layout="wide"
 )
 
-st.title("🤖 AI Data Cleaning & Preprocessing Agent")
+st.title("🤖 AI Data Cleaning & Preprocessing Agent v1")
 
 uploaded_file = st.file_uploader(
     "Upload CSV File",
