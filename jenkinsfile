@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/Sudarshanxx/ai-data-cleaning-agent.git'
+            }
+        }
+
+        stage('Verify Files') {
+            steps {
+                sh 'ls -la'
+                sh 'test -f requirements.txt'
+                sh 'test -f app/app.py'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'AI Data Cleaning Agent CI Passed'
+        }
+
+        failure {
+            echo 'AI Data Cleaning Agent CI Failed'
+        }
+    }
+}
