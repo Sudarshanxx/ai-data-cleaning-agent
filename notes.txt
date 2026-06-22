@@ -1,0 +1,9 @@
+pip install langchain-openai
+
+pip install aiohttp
+
+pip install python-dotenv
+
+pip install langgraph
+
+pip install python-multipart
